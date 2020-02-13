@@ -1,7 +1,7 @@
 {
     "short_name": "BN",
     "name": "Marea Beneficios",
-    "start_url": "/login.html/",
+    "start_url": "login.html",
     "background_color": "#A50034",
     "theme_color": "#A50034",
     "display": "standalone",
