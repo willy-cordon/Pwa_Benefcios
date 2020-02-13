@@ -1748,9 +1748,9 @@ $(function() {
      
     //Activate the PWA    
     if(isPWA === true){
-        if(!$('#manifest-pwa').length){
-            $('head').append('<link rel="manifest" id="manifest-pwa" href="_manifest.json" data-pwa-version="set_by_pwa.js">')
-        }
+        // if(!$('#manifest-pwa').length){
+        //     $('head').append('<link rel="manifest" id="manifest-pwa" href="_manifest.json" data-pwa-version="set_by_pwa.js">')
+        // }
         var loadJS = function(url, implementationCode, location){
             var scriptTag = document.createElement('script');
             scriptTag.src = url;
