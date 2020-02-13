@@ -5,7 +5,7 @@
 "comment": "---if versions are not the same it will cause an update loop",
 "lang" : "en",
 "name" : "Beneficios",
-"scope" : "/",
+// "scope" : "/",
 "display" : "fullscreen",
 "start_url" : "login.html",
 "short_name" : "BEN",
