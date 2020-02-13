@@ -1,9 +1,30 @@
 //Loading the Service Worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/Pwa_Benefcios/sw.js');
-  });
+var url = window.location.href;
+var swLocation = 'Pwa_Benefcios/sw.js';
+var swReg;
+
+let test=url.includes('localhost');
+
+if ( navigator.serviceWorker ) {
+    
+    
+    if ( url.includes('localhost') ) {
+        swLocation = '/Pwa_Benefcios/sw.js';
+        
+    }
+    if(url.includes('https://willy-cordon.github.io/')){
+        swLocation = '/Pwa_Benefcios/sw.js';
+    }
+
+
+    window.addEventListener('load', function() {
+        console.log(swLocation);
+        navigator.serviceWorker.register( swLocation );
+
+    });
+
 }
+
 
 $(document).ready(function(){      
     'use strict'	
