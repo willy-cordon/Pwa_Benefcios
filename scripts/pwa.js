@@ -113,17 +113,17 @@ $(document).ready(function(){
     }    
 
     
-    //Creating Update Modal
-    // function updateModal(){
-    //     var body = $('body');
-    //     var updateModal = $('#menu-update');
-    //     if(!updateModal.length){
-    //        body.append('<div id="menu-update"></div>');
-    //        setTimeout(function(){
-    //            body.find('#menu-update').load('menu-update.html');   
-    //        },250);
-    //     }
-    // };
+    // Creating Update Modal
+    function updateModal(){
+        var body = $('body');
+        var updateModal = $('#menu-update');
+        if(!updateModal.length){
+           body.append('<div id="menu-update"></div>');
+           setTimeout(function(){
+               body.find('#menu-update').load('menu-update.html');   
+           },250);
+        }
+    };
                     
     //Update Version in 5 Seconds After New Version Detected
     function updateButton(){
