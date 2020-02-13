@@ -6,7 +6,7 @@
  * 
  */
 var url = window.location.href;
-var swLocation = '/sw.js';
+var swLocation = 'Pwa_Benefcios/sw.js';
 var swReg;
 
 let test=url.includes('localhost');
@@ -15,7 +15,7 @@ if ( navigator.serviceWorker ) {
     
     
     if ( url.includes('localhost') ) {
-        swLocation = '/sw.js';
+        swLocation = 'Pwa_Benefcios/sw.js';
     }
 
 
