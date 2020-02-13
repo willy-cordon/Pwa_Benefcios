@@ -140,6 +140,7 @@ e.waitUntil(Promise.all([cacheStatic,cacheInmutable]));
 
 
 
+    
     self.addEventListener('message', (event) => {
         console.log(event);
         if (!event.data){
