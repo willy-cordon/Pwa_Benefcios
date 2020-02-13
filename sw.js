@@ -24,7 +24,7 @@
 }
 
  const APP_SHELL = [
-    '/',
+    // '/',
      'login.html',
     // 'indexClaro.html',
     // 'indexMovistar.html',
