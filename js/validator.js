@@ -27,8 +27,8 @@ function validar(){
             console.log(rta);
             if (rta.message == 'SUCCESS:SUCCESS') {
                 //Guardamos los datos en las sessiones 
-                sessionStorage.setItem('token', rta.token      );
-                sessionStorage.setItem('user', rta.username_id );
+                localStorage.setItem('token', rta.token      );
+                localStorage.setItem('user', rta.username_id );
                 location.href="index.html";
 
             }else{

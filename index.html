@@ -412,9 +412,11 @@
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="js/user.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
 <script> 
     $(document).ready(function(){ 
-        let data = sessionStorage.getItem('token');
+        let data = localStorage.getItem('token');
             if(data == '' || data == null || data == undefined){
                 location.href='login.html';     
             }
