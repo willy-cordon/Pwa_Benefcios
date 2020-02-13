@@ -201,7 +201,7 @@ $(function() {
             }
         });
         
-        //Feather Icons
+        //Feather 
         feather.replace()
 
         //Preload Image
