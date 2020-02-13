@@ -7,7 +7,7 @@
 "name" : "Azures",
 "scope" : "/",
 "display" : "fullscreen",
-"start_url" : "index.html",
+"start_url" : "login.html",
 "short_name" : "Azures",
 "description" : "",
 "orientation" : "portrait",
