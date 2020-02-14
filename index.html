@@ -31,7 +31,8 @@
     
     <div class="page-content">   
         <div class="page-title-large color-white bottom-30">
-            <h1 data-username="Enabled!" class="greeting-text"></h1>
+            <h1 data-username="" class="greeting-text"></h1>
+            <h2 id="user" >pepe</h2>
             <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
         </div>
         <div data-height="210" class="page-title-bg preload-image" data-src="images/pictures/20s.jpg"><!-- image --></div>
@@ -425,7 +426,34 @@
             if(data == '' || data == null || data == undefined){
                 location.href='login.html';     
             }
+/* -------------------------------------------------------------------------- */
+/*                       Cargamos los datos del usuario                       */
+/* -------------------------------------------------------------------------- */
+
+    let userid = localStorage.getItem('user');
+    console.log(userid);
+    //Traemos los datos de usuario logueado
+        fetch('https://beneficios.dev.nextarsoft.com/api/developer/users?id='+userid)
+        .then(rta => rta.json())
+        .then(rta => {        
+        // Obteniendo todas las claves del JSON
+            $.each(rta,function(i,item){
+                //Guardamos los datos en el local storage
+                localStorage.setItem('firstname',item.firstname);
+                localStorage.setItem('firstname',item.lastname);
+                //TODO listar los cupones
+                //  localStorage.setItem('firstname',item.cuponcodes.ids);
+            }); 
+            //Obtenemos el nombre del usuario
+            let username = document.getElementById('user');
+            var userdata = localStorage.getItem('firstname');
+            username.innerHTML=userdata.toUpperCase() + '!';
+        })
+
+       
     }); 
+
+
 </script> 
 
 </body>
