@@ -31,6 +31,7 @@
      'login.html',
      'styles/style.css',
      'styles/framework.css',
+     'styles/stylesmarea.css',
      'scripts/custom.js',
      'js/user.js',
      'js/app.js',
