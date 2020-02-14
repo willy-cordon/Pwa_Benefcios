@@ -1,10 +1,13 @@
-
+/**
+ * Sw Js
+ */
     
- const STATIC_CACHE = 'static-v1.6';
- const DYNAMIC_CACHE = 'dynamic-v1.6';
- const INMUTABLE_CACHE = 'inmutable-v1.6';
- const CACHE_DYNAMIC_LIMIT = 0;
-
+ const STATIC_CACHE = 'static-v0.2';
+ const DYNAMIC_CACHE = 'dynamic-v0.2';
+ const INMUTABLE_CACHE = 'inmutable-v0.2';
+ //Limite en mb
+ const CACHE_DYNAMIC_LIMIT = 5;
+//Si  el cache llega al maximo permitido se borra y refresca
  function limpiarCache( cacheName, numeroItems ) {
 
     caches.open( cacheName )
@@ -22,46 +25,41 @@
             
         });
 }
-
+//Archivos indispensables [Pueden ser editados]
  const APP_SHELL = [
-    // '/',
+     '/',
      'login.html',
-    // 'indexClaro.html',
-    // 'indexMovistar.html',
-    // 'indexPersonal.html',
-    // 'vistas/error.html',
-    // 'assets/images/favicon.png',
-    // 'assets/images/error3.png' 
-    //  'assets/css/style.css',
-    //pepe
-    //si sirve zzz
-    //ASDASD
-    //localhost
-    //localhost
+     'styles/style.css',
+     'styles/framework.css',
+     'scripts/custom.js',
+     'js/user.js',
+     'js/app.js',
+     'images/error/pagerror1.jpg'
+
  ];
+ //Archivos fijos por lo Grl. son librerias
  const APP_SHELL_INMUTABLE=[
      
-    //   'assets/js/wow.js',
-    //  'css/fontaweasome.css',
-    //  'https://cdn.jsdelivr.net/npm/sweetalert2@8',
-    //  'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
-    //  'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
-    //  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-    //  'https://app.goodexperiencelg.com/assets/css/animate.css',
-    //  'https://fonts.googleapis.com/css?family=Roboto:400,500',
-    //  'https://use.fontawesome.com/releases/v5.2.0/webfonts/fa-solid-900.woff2'
+     'scripts/jquery.js',
+     'scripts/plugins.js',
+     'fonts/css/fontawesome-all.min.css',
+     'https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet',
+     'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css',
+     'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'
+    
 
 
 
  ];
 
+ //Instalamos el cache de nuestra app
  self.addEventListener('install', e =>{
     const cacheStatic=caches.open(STATIC_CACHE).then(cache=>cache.addAll(APP_SHELL));
     const cacheInmutable=caches.open(INMUTABLE_CACHE).then(cache=>cache.addAll(APP_SHELL_INMUTABLE));
 e.waitUntil(Promise.all([cacheStatic,cacheInmutable]));
 });
 
-
+//Activamos la cache del storage
  self.addEventListener('activate', e => {
 
      const respuesta = caches.keys().then( keys => {
@@ -84,9 +82,7 @@ e.waitUntil(Promise.all([cacheStatic,cacheInmutable]));
  });
 
 
- // 3- Network with cache fallback
-
-
+ //Network with cache fallback
  self.addEventListener('fetch', e =>{
 
     if(e.request.method === 'POST' || e.request.method === 'PUT'){
@@ -120,7 +116,7 @@ e.waitUntil(Promise.all([cacheStatic,cacheInmutable]));
              .catch(err=>{
                  if(e.request.headers.get('accept').includes('text/html')){
                      console.log('la pagina pedida fue un html');
-                     return caches.match('/vistas/error.html');
+                     return caches.match('/views/error.html');
                  }
              })
 
@@ -139,7 +135,7 @@ e.waitUntil(Promise.all([cacheStatic,cacheInmutable]));
     });
 
 
-
+//Mostramos el prompt de instalacion forzada
     self.addEventListener('message', (event) => {
         console.log(event);
         if (!event.data){
