@@ -435,7 +435,8 @@
     //Traemos los datos de usuario logueado
         fetch('https://beneficios.dev.nextarsoft.com/api/developer/users?id='+userid)
         .then(rta => rta.json())
-        .then(rta => {        
+        .then(rta => {   
+            console.log(rta);     
         // Obteniendo todas las claves del JSON
             $.each(rta,function(i,item){
                 //Guardamos los datos en el local storage
