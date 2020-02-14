@@ -1,7 +1,7 @@
 {
-  "name": "zbar.wasm-demo",
+  "name": "beneficiosqr",
   "version": "0.0.0",
-  "description": "A wasm build for C/C++ Zbar bar code scan library.",
+  "description": "lector qr",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
