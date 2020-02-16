@@ -31,7 +31,6 @@
      'login.html',
      'styles/style.css',
      'styles/framework.css',
-     'styles/stylesmarea.css',
      'js/user.js',
      'js/app.js',
      'images/error/pagerror1.jpg'
