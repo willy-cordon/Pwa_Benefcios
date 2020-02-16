@@ -32,7 +32,6 @@
      'styles/style.css',
      'styles/framework.css',
      'styles/stylesmarea.css',
-     'scripts/custom.js',
      'js/user.js',
      'js/app.js',
      'images/error/pagerror1.jpg'
