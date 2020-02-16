@@ -27,24 +27,24 @@
 }
 //Archivos indispensables [Pueden ser editados]
  const APP_SHELL = [
-     '/',
+     
      'login.html',
-     'styles/style.css',
-     'styles/framework.css',
-     'js/user.js',
-     'js/app.js',
-     'images/error/pagerror1.jpg'
+    //  'styles/style.css',
+    //  'styles/framework.css',
+    //  'js/user.js',
+    //  'js/app.js',
+    //  'images/error/pagerror1.jpg'
 
  ];
  //Archivos fijos por lo Grl. son librerias
  const APP_SHELL_INMUTABLE=[
      
-     'scripts/jquery.js',
-     'scripts/plugins.js',
-     'fonts/css/fontawesome-all.min.css',
-     'https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet',
-     'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css',
-     'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'
+    //  'scripts/jquery.js',
+    //  'scripts/plugins.js',
+    //  'fonts/css/fontawesome-all.min.css',
+    //  'https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet',
+    //  'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css',
+    //  'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'
     
 
 
